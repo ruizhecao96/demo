@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+	</head>
+		<meta charset="utf-8">
+		    <style> 
+		      body{zoom: 0.8;} 
+		    </style> 
+		<h1 class='auto-style'; align="center">CMGAN: Conformer-based Metric GAN for Speech Enhancement</h1>
+		<h2 class='auto-style'; align="center">
+			Audio Samples
+		</h2>
+		<h3 class='auto-style'>
+			Speech Denoising
+		</h3>
+		<table style="width: 80%">
+			<tr>
+				<th class='auto-style'>Sample Name</th>
+				<th class='auto-style'>Noisy</th>
+				<th class='auto-style'>MetricGAN+</th>
+				<th class='auto-style'>DEMUCS</th>
+				<th class='auto-style'>PHASEN</th>
+				<th class='auto-style'>PFPL</th>
+				<th class='auto-style'>CMGAN</th>
+				<th class='auto-style'>Clean</th>
+			</tr>
+			<tr>
+				<td class='auto-style'>p232_005</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/noisy/p232_005.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/MetricGAN+/p232_005.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/DEMUCS/p232_005_enhanced.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PHASEN/p232_005.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PFPL/p232_005.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/CMGAN/p232_005.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/clean/p232_005.wav", type="audio/mpeg">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td class='auto-style'>p232_011</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/noisy/p232_011.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/MetricGAN+/p232_011.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/DEMUCS/p232_011_enhanced.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PHASEN/p232_011.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PFPL/p232_011.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/CMGAN/p232_011.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/clean/p232_011.wav", type="audio/mpeg">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td class='auto-style'>p232_021</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/noisy/p232_021.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/MetricGAN+/p232_021.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/DEMUCS/p232_021_enhanced.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PHASEN/p232_021.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PFPL/p232_021.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/CMGAN/p232_021.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/clean/p232_021.wav", type="audio/mpeg">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td class='auto-style'>book_00007_chp_0008_reader_01326_40</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/noisy/book_00007_chp_0008_reader_01326_40.wav_DKITCHEN.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/MetricGAN+/book_00007_chp_0008_reader_01326_40.wav_DKITCHEN.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/DEMUCS/book_00007_chp_0008_reader_01326_40.wav_DKITCHEN_enhanced.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PHASEN/book_00007_chp_0008_reader_01326_40.wav_DKITCHEN.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PFPL/book_00007_chp_0008_reader_01326_40.wav_DKITCHEN.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/CMGAN/book_00007_chp_0008_reader_01326_40.wav_DKITCHEN.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/clean/book_00007_chp_0008_reader_01326_40.wav_DKITCHEN.wav", type="audio/mpeg">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td class='auto-style'>book_00008_chp_0146_reader_07907_5</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/noisy/book_00008_chp_0146_reader_07907_5.wav_DLIVING.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/MetricGAN+/book_00008_chp_0146_reader_07907_5.wav_DLIVING.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/DEMUCS/book_00008_chp_0146_reader_07907_5.wav_DLIVING_enhanced.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PHASEN/book_00008_chp_0146_reader_07907_5.wav_DLIVING.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PFPL/book_00008_chp_0146_reader_07907_5.wav_DLIVING.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/CMGAN/book_00008_chp_0146_reader_07907_5.wav_DLIVING.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/clean/book_00008_chp_0146_reader_07907_5.wav_DLIVING.wav", type="audio/mpeg">
+					</audio>
+				</td>
+			</tr>
+			<tr>
+				<td class='auto-style'>book_05506_chp_0032_reader_11205_25</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/noisy/book_05506_chp_0032_reader_11205_25.wav_NPARK.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/MetricGAN+/book_05506_chp_0032_reader_11205_25.wav_NPARK.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/DEMUCS/book_05506_chp_0032_reader_11205_25.wav_NPARK_enhanced.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PHASEN/book_05506_chp_0032_reader_11205_25.wav_NPARK.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/PFPL/book_05506_chp_0032_reader_11205_25.wav_NPARK.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/CMGAN/book_05506_chp_0032_reader_11205_25.wav_NPARK.wav", type="audio/mpeg">
+					</audio>
+				</td>
+				<td class='auto-style'>
+					<audio controls>
+						<source src="AudioSamples/enhance/clean/book_05506_chp_0032_reader_11205_25.wav_NPARK.wav", type="audio/mpeg">
+					</audio>
+				</td>
+			</tr>
+			</table>
+			<h3 class='auto-style'>
+			Speech Dereverberation
+			</h3>
+			<table style="width: 60%">
+				<tr>
+					<th class='auto-style'>Sample Name</th>
+					<th class='auto-style'>Noisy</th>
+					<th class='auto-style'>CMGAN</th>
+					<th class='auto-style'>Clean</th>
+				</tr>
+				<tr>
+					<td class='auto-style'>c3ac020g</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/noisy/c3ac020g_ch1.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/CMGAN/c3ac020g_ch1.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/clean/c3ac020g.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td class='auto-style'>c3bc020b</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/noisy/c3bc020b_ch1.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/CMGAN/c3bc020b_ch1.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/clean/c3bc020b.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td class='auto-style'>c3bc020f</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/noisy/c3bc020f_ch1.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/CMGAN/c3bc020f_ch1.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/clean/c3bc020f.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td class='auto-style'>c44c020o</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/noisy/c44c020o_ch1.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/CMGAN/c44c020o_ch1.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/dereverberation/clean/c44c020o.wav", type="audio/mpeg">
+						</audio>
+					</td>	
+				</tr>
+			</table>
+<h3 class='auto-style'>
+			Audio Super-Resolution
+			</h3>
+			<table style="width: 80%">
+				<tr>
+					<th class='auto-style'>Sample Name</th>
+					<th class='auto-style'>Low resolution</th>
+					<th class='auto-style'>AFILM</th>
+					<th class='auto-style'>CMGAN</th>
+					<th class='auto-style'>High resolution</th>
+				</tr>
+				<tr>
+					<td class='auto-style'>p347_021-scale 2</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale2/lr/p347_021.lr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale2/AFILM/p347_021.pr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale2/CMGAN/p347_021.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale2/hr/p347_021.hr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td class='auto-style'>p347_023-scale 2</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale2/lr/p347_023.lr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale2/AFILM/p347_023.pr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale2/CMGAN/p347_023.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale2/hr/p347_023.hr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td class='auto-style'>p360_008-scale 4</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale4/lr/p360_008.lr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale4/AFILM/p360_008.pr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale4/CMGAN/p360_008.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale4/hr/p360_008.hr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td class='auto-style'>p360_021-scale 4</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale4/lr/p360_021.lr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale4/AFILM/p360_021.pr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale4/CMGAN/p360_021.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale4/hr/p360_021.hr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td class='auto-style'>p361_019-scale 8</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale8/lr/p361_019.lr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale8/AFILM/p361_019.pr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale8/CMGAN/p361_019.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale8/hr/p361_019.hr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td class='auto-style'>p361_224-scale 8</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale8/lr/p361_224.lr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale8/AFILM/p361_224.pr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale8/CMGAN/p361_224.wav", type="audio/mpeg">
+						</audio>
+					</td>
+					<td class='auto-style'>
+						<audio controls>
+							<source src="AudioSamples/audio_SR/multi_scale8/hr/p361_224.hr.wav", type="audio/mpeg">
+						</audio>
+					</td>
+				</tr>
+			</table>
